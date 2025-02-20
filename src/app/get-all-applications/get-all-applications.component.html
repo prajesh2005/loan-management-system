@@ -1,22 +1,3 @@
-<!-- <div *ngIf="loanApplications" class="container mt-4">
-  <h3 class="text-center mb-4">Loan Applications</h3>
-  <ol class="list-group">
-    <li *ngFor="let applicant of loanApplications" class="list-group-item">
-      <div class="mb-2"><strong>Application ID:</strong> {{ applicant.applicationId }}</div>
-      <div class="mb-2"><strong>Name:</strong> {{ applicant.applicantName }}</div>
-      <div class="mb-2"><strong>Address:</strong> {{ applicant.applicantAddress }}</div>
-      <div class="mb-2"><strong>Profession:</strong> {{ applicant.applicantProfession }}</div>
-      <div class="mb-2"><strong>Email:</strong> {{ applicant.applicantEmail }}</div>
-      <div class="mb-2"><strong>Phone:</strong> {{ applicant.applicantPhone }}</div>
-      <div class="mb-2"><strong>PAN:</strong> {{ applicant.applicantPAN }}</div>
-      <div class="mb-2"><strong>Application Date:</strong> {{ applicant.applicationDate }}</div>
-      <div class="mb-2"><strong>Status:</strong> {{ applicant.applicationStatus }}</div>
-      <div class="mb-2"><strong>Loan Plan ID:</strong> {{ applicant.loanPlanId }}</div>
-      <div class="mb-2"><strong>Number of Dependents:</strong> {{ applicant.noOfDependents }}</div>
-    </li>
-  </ol>
-</div> -->
-
 <div *ngIf="loanApplications" class="container mt-4 table-responsive">
   <h3 class="text-center mb-4">Loan Applications</h3>
   <table class="table table-striped table-bordered table-hover align-middle">
@@ -24,15 +5,8 @@
       <tr>
         <th>Application ID</th>
         <th>Name</th>
-        <!-- <th>Address</th> -->
-        <!-- <th>Profession</th> -->
-        <!-- <th>Email</th> -->
-        <!-- <th>Phone</th> -->
-        <!-- <th>PAN</th> -->
         <th>Application Date</th>
         <th>Status</th>
-        <!-- <th>Loan Plan ID</th> -->
-        <!-- <th>Number of Dependents</th> -->
         <th>Process</th>
       </tr>
     </thead>
@@ -40,15 +14,8 @@
       <tr *ngFor="let applicant of loanApplications | paginate: { itemsPerPage: 10, currentPage: page }">
         <td>{{ applicant.applicationId }}</td>
         <td>{{ applicant.applicantName }}</td>
-        <!-- <td>{{ applicant.applicantAddress }}</td>
-        <td>{{ applicant.applicantProfession }}</td>
-        <td>{{ applicant.applicantEmail }}</td>
-        <td>{{ applicant.applicantPhone }}</td>
-        <td>{{ applicant.applicantPAN }}</td> -->
         <td>{{ applicant.applicationDate |date:"dd-MM-yyyy"}}</td>
         <td>{{ applicant.applicationStatus }}</td>
-        <!-- <td>{{ applicant.loanPlanId }}</td> -->
-        <!-- <td>{{ applicant.noOfDependents }}</td> -->
         <td>
           <button class="btn btn-info" (click)="processApplication(applicant.applicationId)">
             Process

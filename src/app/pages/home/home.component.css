@@ -1,15 +1,16 @@
 .jumbotron {
   display: flex;
   min-height: 100vh;
-  /* background-image: url("assets/background.jpg"); */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   color: #fff;
 }
 
 .right-side {
   flex: 1;
+  padding: 40px;
 }
 
 .left-side {
@@ -33,4 +34,33 @@
 
 .left-side a {
   margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-side,
+  .right-side {
+    padding: 20px;
+    text-align: center;
+  }
+  .left-side h3,
+  .left-side p {
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .left-side a {
+    margin: auto;
+  }
 }

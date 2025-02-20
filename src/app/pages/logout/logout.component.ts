@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logout',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './logout.component.html',
   styleUrl: './logout.component.css',
 })
 export class LogoutComponent implements OnInit {
-  constructor(private ls: LoginService) {}
+  constructor(private ls: LoginService, private router: Router) {}
   ngOnInit(): void {
     localStorage.clear();
     this.ls.publish();
+    setTimeout(() => {
+      this.router.navigateByUrl('/');
+    }, 2000);
   }
 }

@@ -1,27 +1,3 @@
-// // // import { LoginComponent } from './login/login.component';
-// // // import { Routes } from '@angular/router';
-// // // import { SignupComponent } from './signup/signup.component';
-// // // import { LogoutComponent } from './logout/logout.component';
-// // // // import { NavComponent } from './nav/nav.component';
-// // // import { GetAllApplicationsComponent } from './get-all-applications/get-all-applications.component';
-// // // import { HomeComponent } from './home/home.component';
-// // // import { CreateApplicationComponent } from './create-application/create-application.component';
-// // // import { NavComponent } from './nav/nav.component';
-// // // import { GetDocumentTypesComponent } from './get-document-types/get-document-types.component';
-// // // import { ProcessLoanApplicationComponent } from './process-loan-application/process-loan-application.component';
-
-// // // export const routes: Routes = [
-// // //   { path: '', component: HomeComponent },
-// // //   { path: 'login', component: LoginComponent },
-// // //   { path: 'signup', component: SignupComponent },
-// // //   { path: 'logout', component: LogoutComponent },
-// // //   { path: 'nav', component: NavComponent },
-// // //   { path: 'create', component: CreateApplicationComponent },
-// // //   { path: 'app', component: GetAllApplicationsComponent },
-// // //   { path: 'doc', component: GetDocumentTypesComponent },
-// // //   { path: 'process-loan/:id', component: ProcessLoanApplicationComponent },
-// // // ];
-
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -46,7 +22,11 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'nav', component: NavComponent, canActivate: [AuthGuard] },
+  {
+    path: 'nav',
+    component: NavComponent,
+    // canActivate: [AuthGuard],
+  },
   {
     path: 'create',
     component: CreateApplicationComponent,

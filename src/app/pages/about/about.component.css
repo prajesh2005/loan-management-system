@@ -1,49 +1,9 @@
-/* .about-us {
-  max-width: 800px;
-  padding: 30px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-}
-
-.about-us h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.about-us p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.about-us ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.about-us ul li {
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .about-us {
-    padding: 30px;
-  }
-} */
-
 .about-us {
-  /* background: url("your-background-image.jpg") no-repeat center center/cover; */
   position: relative;
 }
 
 .about-us .container {
-  /* background: rgba(255, 255, 255, 0.9); */
-  padding: 20px;
+  max-width: 90%;
+  padding: 30px 0;
   border-radius: 10px;
-}
-
-.about-us ul li i {
-  margin-right: 10px;
 }

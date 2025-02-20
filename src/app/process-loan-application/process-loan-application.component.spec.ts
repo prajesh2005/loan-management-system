@@ -8,9 +8,8 @@ describe('ProcessLoanApplicationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProcessLoanApplicationComponent]
-    })
-    .compileComponents();
+      imports: [ProcessLoanApplicationComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProcessLoanApplicationComponent);
     component = fixture.componentInstance;

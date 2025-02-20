@@ -8,7 +8,6 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   fnLogin(loginRequest: any) {
-    // return this.http.post('http://localhost:5000/v1/login', loginRequest);
     return this.http.post(
       'http://localhost:5001/api/users/login',
       loginRequest
